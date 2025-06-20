@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <SDL2/SDL.h>
+#include <stdbool.h>
+
 #include "objeto.h"
 #include "tela.h"
 #include "algebra.h"
@@ -16,7 +18,7 @@ int main( int argc, char * argv[] ){
         printf("SDL não inicializou! SDL Erro: %s\n", SDL_GetError());
     }
 
-    SDL_Window *window = criaTela("Hello SDL World!");
+    SDL_Window *window = criaTela("Transformações 3D");
 
     if(window == NULL){
         printf("SDL não criou a janela! SDL Erro: %s\n", SDL_GetError());
@@ -27,13 +29,19 @@ int main( int argc, char * argv[] ){
 
     SDL_Event windowEvent;
 
-    while(1){
+    tObjeto3d *obj = carregaObjeto("src/objs/cubo.txt");
+    imprimeObjetoDBG(obj);
+
+    while(true){ {
+
         if( SDL_PollEvent(&windowEvent)){
             if(windowEvent.type == SDL_QUIT){
                 break;
             }
         }
+        
         SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+        
         SDL_RenderClear(renderer);
 
         SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);

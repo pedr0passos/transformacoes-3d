@@ -23,4 +23,5 @@ build/core/objeto.o: src/core/objeto.c include/SDL2/SDL.h \
  include/SDL2/SDL_power.h include/SDL2/SDL_render.h \
  include/SDL2/SDL_shape.h include/SDL2/SDL_system.h \
  include/SDL2/SDL_timer.h include/SDL2/SDL_version.h \
- include/SDL2/SDL_locale.h include/SDL2/SDL_misc.h src/core/objeto.h
+ include/SDL2/SDL_locale.h include/SDL2/SDL_misc.h src/core/objeto.h \
+ src/core/algebra.h
