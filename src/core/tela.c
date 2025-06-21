@@ -4,7 +4,13 @@
 
 //Aloca a tela utilizando o título passado como parâmetro e as largura e altura definidas no tela.h
 SDL_Window *criaTela(char *titulo){
-    return SDL_CreateWindow( titulo, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, WIDTH, HEIGHT, SDL_WINDOW_ALLOW_HIGHDPI);
+    return SDL_CreateWindow(
+        titulo, 
+        SDL_WINDOWPOS_UNDEFINED,
+        SDL_WINDOWPOS_UNDEFINED,
+        WIDTH, HEIGHT, 
+        SDL_WINDOW_ALLOW_HIGHDPI | SDL_WINDOW_RESIZABLE | SDL_WINDOW_MAXIMIZED | SDL_WINDOW_OPENGL
+    );
 }
 
 //Desenha um segmento de reta na tela
