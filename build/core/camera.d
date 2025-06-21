@@ -1,5 +1,5 @@
-build/core/camera.o: src/core/camera.c include/SDL2/SDL.h \
- include/SDL2/SDL_main.h include/SDL2/SDL_stdinc.h \
+build/core/camera.o: src/core/camera.c src/core/camera.h \
+ include/SDL2/SDL.h include/SDL2/SDL_main.h include/SDL2/SDL_stdinc.h \
  include/SDL2/SDL_config.h include/SDL2/SDL_platform.h \
  include/SDL2/begin_code.h include/SDL2/close_code.h \
  include/SDL2/SDL_config_windows.h include/SDL2/SDL_assert.h \
@@ -23,4 +23,4 @@ build/core/camera.o: src/core/camera.c include/SDL2/SDL.h \
  include/SDL2/SDL_power.h include/SDL2/SDL_render.h \
  include/SDL2/SDL_shape.h include/SDL2/SDL_system.h \
  include/SDL2/SDL_timer.h include/SDL2/SDL_version.h \
- include/SDL2/SDL_locale.h include/SDL2/SDL_misc.h src/core/camera.h
+ include/SDL2/SDL_locale.h include/SDL2/SDL_misc.h src/core/algebra.h
